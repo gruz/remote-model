@@ -1,9 +1,13 @@
 {
-  "name": "torann/remote-model",
+  "name": "gruz/remote-model",
   "description": "An eloquent-like model, for the Laravel framework.",
   "keywords": ["laravel","eloquent","model","api","remote data","custom models"],
   "license": "BSD-2-Clause",
   "authors": [
+    {
+      "name": "Gruz",
+      "email": "arygroup@gmail.com"
+    },
     {
       "name": "Daniel Stainback",
       "email": "torann@gmail.com"
@@ -22,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Torann\\RemoteModel\\": "src/Torann/RemoteModel"
+      "Gruz\\RemoteModel\\": "src/Gruz/RemoteModel"
     }
   },
   "autoload-dev": {
