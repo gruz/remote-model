@@ -1853,9 +1853,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
         // event set individually instead of catching event for all the models.
         $event = "eloquent.{$event}: " . get_class($this);
 
-        $method = $halt ? 'until' : 'fire';
-
-        return app('events')->$method($event, $this);
+        return app('events')->dispatch($event, $this);
     }
 
     /**
@@ -1948,5 +1946,21 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
     public function __wakeup()
     {
         $this->bootIfNotBooted();
+    }
+    
+    /**
+     * Get the table associated with the model.
+     *
+     * @return string
+     */
+    public function getTable()
+    {
+        return isset($this->table)
+            ? $this->table
+            : Str::snake(Str::pluralStudly(class_basename($this)));
+    }
+
+    public function getModel() {
+        return $this;
     }
 }
