@@ -1,6 +1,6 @@
 <?php
 
-namespace Torann\RemoteModel;
+namespace Gruz\RemoteModel;
 
 use RuntimeException;
 
