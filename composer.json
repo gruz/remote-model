@@ -26,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Gruz\\RemoteModel\\": "src/Gruz/RemoteModel"
+      "Torann\\RemoteModel\\": "src/Torann/RemoteModel"
     }
   },
   "autoload-dev": {
