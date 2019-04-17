@@ -1,8 +1,8 @@
 <?php
 
-namespace Torann\RemoteModel\Relations;
+namespace Gruz\RemoteModel\Relations;
 
-use Torann\RemoteModel\Model;
+use Gruz\RemoteModel\Model;
 
 class Relation
 {
