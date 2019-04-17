@@ -7,14 +7,14 @@ This model provides an eloquent-like base class that can be used to build custom
 Install using composer:
 
 ```
-$ composer require torann/remote-model
+$ composer require gruz/remote-model
 ```
 
 ## Clients
 
 ### Custom request method
 
-To implement a custom API request method in the model, simple extend the `Torann\RemoteModel\Model` class and use that extended model in the app models.
+To implement a custom API request method in the model, simple extend the `Gruz\RemoteModel\Model` class and use that extended model in the app models.
 
 **Example**
 
@@ -24,7 +24,7 @@ To implement a custom API request method in the model, simple extend the `Torann
 namespace App;
 
 use APIClient;
-use Torann\RemoteModel\Model;
+use Gruz\RemoteModel\Model;
 
 class BaseModel extends Model
 {
@@ -208,7 +208,7 @@ Below is an example of the service provider way of setting the client.
 
 namespace App\Providers;
 
-use Torann\RemoteModel\Model;
+use Gruz\RemoteModel\Model;
 use PackageName\API\Client;
 use Illuminate\Support\ServiceProvider;
 
@@ -258,7 +258,7 @@ class ApiServiceProvider extends ServiceProvider
 namespace App;
 
 use DateTime;
-use Torann\RemoteModel\Model as BaseModel;
+use Gruz\RemoteModel\Model as BaseModel;
 
 class User extends BaseModel
 {
@@ -303,13 +303,3 @@ $item->password = 'bar';
 
 echo $item; // {"name":"john"}
 ```
-
-## Change Log
-
-**0.1.0**
-
-- Fix parent ID bug
-
-**0.0.1**
-
-- First release
