@@ -11,6 +11,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Str;
 
 abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializable
 {
